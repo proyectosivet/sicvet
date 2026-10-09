@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SICVET - Mis Mascotas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body class="bg-light">
+
+  <div class="d-flex">
+    <!-- Menú Lateral -->
+    <aside class="bg-white border-end d-flex flex-column justify-content-between p-3 min-vh-100 sicvet-inline-style-006">
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-4 px-2">
+            <div class=" rounded-3 d-flex align-items-center justify-content-center p-1 shadow-sm overflow-hidden sicvet-inline-style-007">
+            <img src="/assets/dashboard/img/logo.png" alt="logo huella" class="img-fluid w-100 h-100 object-fit-contain">
+            <i class="bi bi-paw-fill"></i>
+          </div>
+          <div>
+            <h6 class="fw-bold mb-0">SICVET</h6>
+            <small class="text-muted d-block sicvet-inline-style-008">Gestión Veterinaria</small>
+          </div>
+        </div>
+
+        <div class="nav nav-pills flex-column gap-1">
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="servicios_rolcliente.html">
+            <i class="bi bi-heart-pulse"></i> Servicios
+          </a>
+          <a class="nav-link active d-flex align-items-center gap-2" href="mascotas_rolcliente.html">
+            <i class="bi bi-paw"></i> Mis Mascotas
+          </a>
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="mis-citas_rolcliente.html">
+            <i class="bi bi-calendar-event"></i> Mis Citas
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-3 border-top">
+        <a href="#" class="text-decoration-none text-secondary d-flex align-items-center gap-2 mb-2 small px-2">
+          <i class="bi bi-person"></i> Mi Perfil
+        </a>
+        <a href="/Home.html" class="text-decoration-none text-danger d-flex align-items-center gap-2 mb-3 small px-2">
+          <i class="bi bi-box-arrow-left"></i> Cerrar Sesión
+        </a>
+        <div class="d-flex align-items-center gap-2 px-2">
+          <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">MG</div>
+          <div>
+            <p class="fw-bold mb-0 small">María García</p>
+            <small class="text-muted d-block sicvet-inline-style-008">Cliente</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow-1 min-vh-100">
+      <header class="d-flex justify-content-between align-items-center p-3 px-4 bg-white border-bottom">
+        <h5 class="fw-bold mb-0">Mis Mascotas</h5>
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-bell text-secondary"></i>
+          <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">MG</div>
+          <div class="d-none d-md-block">
+            <p class="fw-bold mb-0 small">María</p>
+            <small class="text-muted d-block sicvet-inline-style-008">Cliente</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="p-4">
+        <div class="row g-3">
+          <!-- Mascota 1: Luna -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center sicvet-inline-style-018">
+                  <i class="bi bi-paw fs-5"></i>
+                </div>
+                <div class="text-muted small">
+                  <i class="bi bi-pencil me-2 cursor-pointer"></i>
+                  <i class="bi bi-trash cursor-pointer"></i>
+                </div>
+              </div>
+              <h6 class="fw-bold mb-1">Luna</h6>
+              <p class="text-muted small mb-1">Golden Retriever · Perro</p>
+              <p class="text-muted small mb-3">3 años · 28 kg</p>
+              <p class="text-muted mb-0 sicvet-inline-style-008">Alérgica a ciertos alimentos. Última vacuna: Marzo 2024.</p>
+            </div>
+          </div>
+
+          <!-- Mascota 2: Mimi -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center sicvet-inline-style-018">
+                  <i class="bi bi-paw fs-5"></i>
+                </div>
+                <div class="text-muted small">
+                  <i class="bi bi-pencil me-2 cursor-pointer"></i>
+                  <i class="bi bi-trash cursor-pointer"></i>
+                </div>
+              </div>
+              <h6 class="fw-bold mb-1">Mimi</h6>
+              <p class="text-muted small mb-1">Persa · Gato</p>
+              <p class="text-muted small mb-3">5 años · 4 kg</p>
+              <p class="text-muted mb-0 sicvet-inline-style-008">Tratamiento dental en curso.</p>
+            </div>
+          </div>
+
+          <!-- Tarjeta Botón para Agregar Mascota -->
+          <div class="col-md-4">
+            <div class="card border-2 border-secondary-subtle rounded-4 d-flex flex-column align-items-center justify-content-center p-4 text-muted h-100 sicvet-inline-style-019" data-bs-toggle="modal" data-bs-target="#modalAgregarMascota">
+              <i class="bi bi-plus-lg fs-3 mb-1"></i>
+              <span class="fw-bold small">Agregar Mascota</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL AGREGAR MASCOTA -->
+  <div class="modal fade" id="modalAgregarMascota" tabindex="-1" aria-labelledby="modalAgregarMascotaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered sicvet-inline-style-013">
+      <div class="modal-content border-0 shadow-lg rounded-4 p-3">
+        
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="modalAgregarMascotaLabel">Agregar Mascota</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body py-3">
+          <form id="formAgregarMascota">
+            <!-- Nombre -->
+            <div class="mb-3">
+              <label class="form-label text-uppercase text-secondary fw-bold sicvet-inline-style-008">NOMBRE</label>
+              <div class="input-group rounded-3 border">
+                <span class="input-group-text bg-transparent border-0 text-muted"><i class="bi bi-paw"></i></span>
+                <input type="text" class="form-control border-0 shadow-none ps-0" placeholder="Ej: Firulais">
+              </div>
+            </div>
+
+            <!-- Especie -->
+            <div class="mb-3">
+              <label class="form-label text-uppercase text-secondary fw-bold d-block sicvet-inline-style-008">ESPECIE</label>
+              <div class="btn-group w-100" role="group">
+                <input type="radio" class="btn-check" name="especie" id="espPerro" autocomplete="off" checked>
+                <label class="btn btn-outline-primary rounded-start-3 py-2 fw-medium" for="espPerro">Perro</label>
+
+                <input type="radio" class="btn-check" name="especie" id="espGato" autocomplete="off">
+                <label class="btn btn-outline-primary py-2 fw-medium" for="espGato">Gato</label>
+
+                <input type="radio" class="btn-check" name="especie" id="espAve" autocomplete="off">
+                <label class="btn btn-outline-primary py-2 fw-medium" for="espAve">Ave</label>
+
+                <input type="radio" class="btn-check" name="especie" id="espOtro" autocomplete="off">
+                <label class="btn btn-outline-primary rounded-end-3 py-2 fw-medium" for="espOtro">Otro</label>
+              </div>
+            </div>
+
+            <!-- Raza -->
+            <div class="mb-3">
+              <label class="form-label text-uppercase text-secondary fw-bold sicvet-inline-style-008">RAZA</label>
+              <div class="input-group rounded-3 border">
+                <input type="text" class="form-control border-0 shadow-none px-3" placeholder="Ej: Golden Retriever">
+              </div>
+            </div>
+
+            <!-- Edad y Peso -->
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label text-uppercase text-secondary fw-bold sicvet-inline-style-008">EDAD (AÑOS)</label>
+                <input type="number" class="form-control border rounded-3 shadow-none px-3" value="3">
+              </div>
+              <div class="col-6">
+                <label class="form-label text-uppercase text-secondary fw-bold sicvet-inline-style-008">PESO (KG)</label>
+                <input type="number" class="form-control border rounded-3 shadow-none px-3" value="12">
+              </div>
+            </div>
+
+            <!-- Notas Médicas -->
+            <div class="mb-3">
+              <label class="form-label text-uppercase text-secondary fw-bold sicvet-inline-style-008">NOTAS MÉDICAS</label>
+              <textarea class="form-control border rounded-3 shadow-none" rows="3" placeholder="Alergias, condiciones especiales..."></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer border-0 pt-0 d-flex gap-2">
+          <button type="button" class="btn btn-light rounded-pill px-4 border flex-grow-1 text-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary rounded-pill px-4 flex-grow-1 fw-medium" data-bs-dismiss="modal">Guardar Mascota</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

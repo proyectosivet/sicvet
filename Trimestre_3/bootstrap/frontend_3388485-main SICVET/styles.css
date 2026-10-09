@@ -1,0 +1,285 @@
+/* Shared SICVET styles migrated from the project HTML pages. */
+/* Each selector preserves the original inline style declaration. */
+/* Repeated class selectors keep these rules ahead of ordinary utility classes. */
+
+/* sicvet-inline-style-001: background-image: url(/assets/dashboard/img/fondo\ registro.png); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; */
+.sicvet-inline-style-001.sicvet-inline-style-001 {
+  background-image: url(/assets/dashboard/img/fondo\ registro.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* sicvet-inline-style-002: width:100%; max-width: 440px; */
+.sicvet-inline-style-002.sicvet-inline-style-002 {
+  width:100%;
+  max-width: 440px;
+}
+
+/* sicvet-inline-style-003: cursor: pointer; */
+.sicvet-inline-style-003.sicvet-inline-style-003 {
+  cursor: pointer;
+}
+
+/* sicvet-inline-style-004: max-width: 420px; */
+.sicvet-inline-style-004.sicvet-inline-style-004 {
+  max-width: 420px;
+}
+
+/* sicvet-inline-style-005: max-width: 360px; */
+.sicvet-inline-style-005.sicvet-inline-style-005 {
+  max-width: 360px;
+}
+
+/* sicvet-inline-style-006: width: 240px; */
+.sicvet-inline-style-006.sicvet-inline-style-006 {
+  width: 240px;
+}
+
+/* sicvet-inline-style-007: width: 40px; height: 40px; */
+.sicvet-inline-style-007.sicvet-inline-style-007 {
+  width: 40px;
+  height: 40px;
+}
+
+/* sicvet-inline-style-008: font-size: 0.75rem; */
+.sicvet-inline-style-008.sicvet-inline-style-008 {
+  font-size: 0.75rem;
+}
+
+/* sicvet-inline-style-009: width: 36px; height: 36px; */
+.sicvet-inline-style-009.sicvet-inline-style-009 {
+  width: 36px;
+  height: 36px;
+}
+
+/* sicvet-inline-style-010: width: 70px; */
+.sicvet-inline-style-010.sicvet-inline-style-010 {
+  width: 70px;
+}
+
+/* sicvet-inline-style-011: width: 100px; */
+.sicvet-inline-style-011.sicvet-inline-style-011 {
+  width: 100px;
+}
+
+/* sicvet-inline-style-012: width: 30px; */
+.sicvet-inline-style-012.sicvet-inline-style-012 {
+  width: 30px;
+}
+
+/* sicvet-inline-style-013: max-width: 440px; */
+.sicvet-inline-style-013.sicvet-inline-style-013 {
+  max-width: 440px;
+}
+
+/* sicvet-inline-style-014: width: 380px; */
+.sicvet-inline-style-014.sicvet-inline-style-014 {
+  width: 380px;
+}
+
+/* sicvet-inline-style-015: width: 80px; */
+.sicvet-inline-style-015.sicvet-inline-style-015 {
+  width: 80px;
+}
+
+/* sicvet-inline-style-016: max-width: 580px; width: 100%; */
+.sicvet-inline-style-016.sicvet-inline-style-016 {
+  max-width: 580px;
+  width: 100%;
+}
+
+/* sicvet-inline-style-017: font-size: 0.5rem; */
+.sicvet-inline-style-017.sicvet-inline-style-017 {
+  font-size: 0.5rem;
+}
+
+/* sicvet-inline-style-018: width: 44px; height: 44px; */
+.sicvet-inline-style-018.sicvet-inline-style-018 {
+  width: 44px;
+  height: 44px;
+}
+
+/* sicvet-inline-style-019: border-style: dashed !important; min-height: 200px; cursor: pointer; */
+.sicvet-inline-style-019.sicvet-inline-style-019 {
+  border-style: dashed !important;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+/* sicvet-inline-style-020: width: 35px; height: 35px; */
+.sicvet-inline-style-020.sicvet-inline-style-020 {
+  width: 35px;
+  height: 35px;
+}
+
+/* sicvet-inline-style-021: width: 260px; min-height: 100vh; */
+.sicvet-inline-style-021.sicvet-inline-style-021 {
+  width: 260px;
+  min-height: 100vh;
+}
+
+/* sicvet-inline-style-022: width: 38px; height: 38px; */
+.sicvet-inline-style-022.sicvet-inline-style-022 {
+  width: 38px;
+  height: 38px;
+}
+
+/* sicvet-inline-style-023: max-width: 800px; */
+.sicvet-inline-style-023.sicvet-inline-style-023 {
+  max-width: 800px;
+}
+
+/* sicvet-inline-style-024: width: 80px; height: 80px; font-size: 1.75rem; */
+.sicvet-inline-style-024.sicvet-inline-style-024 {
+  width: 80px;
+  height: 80px;
+  font-size: 1.75rem;
+}
+
+/* sicvet-inline-style-025: font-size: 0.75rem; letter-spacing: 1px; */
+.sicvet-inline-style-025.sicvet-inline-style-025 {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* sicvet-inline-style-026: font-size: 0.7rem; letter-spacing: 0.5px; */
+.sicvet-inline-style-026.sicvet-inline-style-026 {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+/* sicvet-inline-style-027: width: 280px; min-height: 100vh; */
+.sicvet-inline-style-027.sicvet-inline-style-027 {
+  width: 280px;
+  min-height: 100vh;
+}
+
+/* sicvet-inline-style-028: width: 40px; height: 40px; font-size: 0.85rem; */
+.sicvet-inline-style-028.sicvet-inline-style-028 {
+  width: 40px;
+  height: 40px;
+  font-size: 0.85rem;
+}
+
+/* sicvet-inline-style-029: font-size: 0.9rem; */
+.sicvet-inline-style-029.sicvet-inline-style-029 {
+  font-size: 0.9rem;
+}
+
+/* sicvet-inline-style-030: height: 30px; */
+.sicvet-inline-style-030.sicvet-inline-style-030 {
+  height: 30px;
+}
+
+/* sicvet-inline-style-031: width: 38px; height: 38px; font-size: 0.85rem; */
+.sicvet-inline-style-031.sicvet-inline-style-031 {
+  width: 38px;
+  height: 38px;
+  font-size: 0.85rem;
+}
+
+/* sicvet-inline-style-032: font-size: 0.85rem; */
+.sicvet-inline-style-032.sicvet-inline-style-032 {
+  font-size: 0.85rem;
+}
+
+/* sicvet-inline-style-033: min-width: 60px; */
+.sicvet-inline-style-033.sicvet-inline-style-033 {
+  min-width: 60px;
+}
+
+/* sicvet-inline-style-034: width: 38px; height: 38px; font-size: 0.8rem; */
+.sicvet-inline-style-034.sicvet-inline-style-034 {
+  width: 38px;
+  height: 38px;
+  font-size: 0.8rem;
+}
+
+/* sicvet-inline-style-035: font-size: 0.8rem; */
+.sicvet-inline-style-035.sicvet-inline-style-035 {
+  font-size: 0.8rem;
+}
+
+/* sicvet-inline-style-036: min-width: 700px; */
+.sicvet-inline-style-036.sicvet-inline-style-036 {
+  min-width: 700px;
+}
+
+/* sicvet-inline-style-037: min-width: 650px; */
+.sicvet-inline-style-037.sicvet-inline-style-037 {
+  min-width: 650px;
+}
+
+/* sicvet-inline-style-038: width: 36px; height: 36px; font-size: 0.8rem; */
+.sicvet-inline-style-038.sicvet-inline-style-038 {
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
+}
+
+/* sicvet-inline-style-039: max-width: 600px; */
+.sicvet-inline-style-039.sicvet-inline-style-039 {
+  max-width: 600px;
+}
+
+/* sicvet-inline-style-040: width: 40px; */
+.sicvet-inline-style-040.sicvet-inline-style-040 {
+  width: 40px;
+}
+
+/* sicvet-inline-style-041: max-width: 650px; */
+.sicvet-inline-style-041.sicvet-inline-style-041 {
+  max-width: 650px;
+}
+
+/* sicvet-inline-style-042: font-size: 0.7rem; */
+.sicvet-inline-style-042.sicvet-inline-style-042 {
+  font-size: 0.7rem;
+}
+
+/* sicvet-inline-style-043: min-width: 750px; */
+.sicvet-inline-style-043.sicvet-inline-style-043 {
+  min-width: 750px;
+}
+
+/* sicvet-inline-style-044: width: 32px; height: 32px; font-size: 0.75rem; */
+.sicvet-inline-style-044.sicvet-inline-style-044 {
+  width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+}
+
+/* sicvet-inline-style-045: width: 400px; */
+.sicvet-inline-style-045.sicvet-inline-style-045 {
+  width: 400px;
+}
+
+/* sicvet-inline-style-046: max-width: 400px; */
+.sicvet-inline-style-046.sicvet-inline-style-046 {
+  max-width: 400px;
+}
+
+/* sicvet-inline-style-047: width: 56px; height: 56px; */
+.sicvet-inline-style-047.sicvet-inline-style-047 {
+  width: 56px;
+  height: 56px;
+}
+
+/* sicvet-inline-style-048: width: 64px; height: 64px; */
+.sicvet-inline-style-048.sicvet-inline-style-048 {
+  width: 64px;
+  height: 64px;
+}
+
+/* sicvet-inline-style-049: width: 28px; height: 28px; */
+.sicvet-inline-style-049.sicvet-inline-style-049 {
+  width: 28px;
+  height: 28px;
+}
+
+/* sicvet-inline-style-050: font-size: 1rem; */
+.sicvet-inline-style-050.sicvet-inline-style-050 {
+  font-size: 1rem;
+}

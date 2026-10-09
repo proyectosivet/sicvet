@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SICVET - Módulo Recepcionista</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body> 
+
+    <!-- CONTENEDOR PRINCIPAL RESPONSIVO -->
+    <div class="d-flex flex-column flex-md-row">
+
+        <!-- BARRA SUPERIOR MÓVIL -->
+        <div class="d-md-none bg-white border-bottom p-3 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <div class="bg-primary text-white rounded-3 p-2 me-2 d-flex align-items-center justify-content-center sicvet-inline-style-020">
+                    <i class="bi bi-paw-fill fs-6"></i>
+                </div>
+                <h6 class="fw-bold mb-0 text-dark">SICVET</h6>
+            </div>
+            
+            <button class="btn btn-light border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+        </div>
+
+        <!-- SIDEBAR ADAPTATIVO -->
+        <div class="offcanvas-md offcanvas-start bg-body-tertiary p-3 d-flex flex-column flex-shrink-0 sicvet-inline-style-027" id="sidebarOffcanvas">
+
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center">
+                    <div class=" rounded-3 d-flex align-items-center justify-content-center p-1 shadow-sm overflow-hidden sicvet-inline-style-007">
+            <img src="/assets/dashboard/img/logo.png" alt="logo huella" class="img-fluid w-100 h-100 object-fit-contain">
+                        <i class="bi bi-paw-fill fs-5"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-0 text-dark">SICVET</h6>
+                        <small class="text-muted sicvet-inline-style-008">Gestión Veterinaria</small>
+                    </div>
+                </div>
+                <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" data-bs-target="#sidebarOffcanvas"></button>
+            </div>
+
+            <!-- Menú Principal (Tabs de Navegación) -->
+            <ul class="nav nav-pills flex-column gap-1 mb-3" id="v-pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active bg-primary-subtle text-primary fw-semibold rounded-3 py-2 px-3 text-start w-100 border-0" id="pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#pills-dashboard" type="button" role="tab">
+                        <i class="bi bi-house-door me-2"></i> Dashboard
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary fw-medium py-2 px-3 text-start w-100 border-0 bg-transparent" id="pills-agenda-tab" data-bs-toggle="pill" data-bs-target="#pills-agenda" type="button" role="tab">
+                        <i class="bi bi-calendar-event me-2"></i> Agenda
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary fw-medium py-2 px-3 text-start w-100 border-0 bg-transparent" id="pills-clientes-tab" data-bs-toggle="pill" data-bs-target="#pills-clientes" type="button" role="tab">
+                        <i class="bi bi-people me-2"></i> Clientes y Mascotas
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary fw-medium py-2 px-3 text-start w-100 border-0 bg-transparent" id="pills-nuevacita-tab" data-bs-toggle="pill" data-bs-target="#pills-nuevacita" type="button" role="tab">
+                        <i class="bi bi-plus-lg me-2"></i> Nueva Cita
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary fw-medium py-2 px-3 text-start w-100 border-0 bg-transparent" id="pills-historial-tab" data-bs-toggle="pill" data-bs-target="#pills-historial" type="button" role="tab">
+                        <i class="bi bi-clock-history me-2"></i> Historial de Citas
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Pie de Sidebar -->
+            <div class="mt-auto">
+                <ul class="nav nav-pills flex-column gap-1 mb-3">
+                    <li class="nav-item">
+                        <button class="nav-link text-secondary fw-medium py-2 px-3 text-start w-100 border-0 bg-transparent" type="button">
+                            <i class="bi bi-person me-2"></i> Mi Perfil
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Home.html" class="nav-link text-danger fw-medium py-2 px-3">
+                            <i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+
+                <hr class="my-2 text-secondary opacity-25">
+
+                <div class="d-flex align-items-center pt-2">
+                    <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center me-2 flex-shrink-0 sicvet-inline-style-028">
+                        SC
+                    </div>
+                    <div class="overflow-hidden">
+                        <h6 class="fw-bold mb-0 text-dark text-truncate sicvet-inline-style-029">Sofía Castillo</h6>
+                        <small class="text-muted d-block text-truncate sicvet-inline-style-008">Recepcionista</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL DINÁMICO -->
+        <div class="flex-grow-1 p-3 p-md-4 bg-light overflow-auto">
+            
+            <div class="tab-content" id="v-pills-tabContent">
+
+                <!-- ================= MÓDULO 1: DASHBOARD ================= -->
+                <div class="tab-pane fade show active" id="pills-dashboard" role="tabpanel">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">Dashboard</h4>
+                        
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-light rounded-circle p-2 border-0"><i class="bi bi-bell fs-5 text-secondary"></i></button>
+                            <div class="vr opacity-25 sicvet-inline-style-030"></div>
+                            
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-031">SC</div>
+                                <div class="d-none d-sm-block">
+                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Sofía</h6>
+                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filtros -->
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 shadow-sm text-secondary small fw-medium">Hoy</button>
+                        <button class="btn btn-primary rounded-pill px-3 py-1 border-0 shadow-sm small fw-semibold">Semana</button>
+                        <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Mes</button>
+                        <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Año</button>
+                        <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Personalizado</button>
+                    </div>
+
+                    <!-- Grid Métrica -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="bg-primary-subtle text-primary rounded-circle p-2 d-flex align-items-center justify-content-center sicvet-inline-style-007"><i class="bi bi-people fs-5"></i></div>
+                                    <span class="badge bg-success-subtle text-success rounded-pill fw-semibold">+12%</span>
+                                </div>
+                                <h2 class="fw-bold mb-0">6</h2>
+                                <small class="text-muted fw-medium">Clientes Registrados</small>
+                                <div class="border-bottom border-primary border-2 opacity-50 mt-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="bg-success-subtle text-success rounded-circle p-2 d-flex align-items-center justify-content-center sicvet-inline-style-007"><i class="bi bi-paw fs-5"></i></div>
+                                    <span class="badge bg-success-subtle text-success rounded-pill fw-semibold">+8%</span>
+                                </div>
+                                <h2 class="fw-bold mb-0">8</h2>
+                                <small class="text-muted fw-medium">Mascotas Registradas</small>
+                                <div class="border-bottom border-success border-2 opacity-50 mt-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="bg-primary-subtle text-primary rounded-circle p-2 d-flex align-items-center justify-content-center sicvet-inline-style-007"><i class="bi bi-calendar-check fs-5"></i></div>
+                                    <span class="badge bg-success-subtle text-success rounded-pill fw-semibold">+5%</span>
+                                </div>
+                                <h2 class="fw-bold mb-0">10</h2>
+                                <small class="text-muted fw-medium">Citas Programadas</small>
+                                <div class="border-bottom border-primary border-2 opacity-50 mt-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="bg-success-subtle text-success rounded-circle p-2 d-flex align-items-center justify-content-center sicvet-inline-style-007"><i class="bi bi-check-circle fs-5"></i></div>
+                                    <span class="badge bg-success-subtle text-success rounded-pill fw-semibold">+18%</span>
+                                </div>
+                                <h2 class="fw-bold mb-0">3</h2>
+                                <small class="text-muted fw-medium">Citas Completadas</small>
+                                <div class="border-bottom border-success border-2 opacity-50 mt-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="bg-danger-subtle text-danger rounded-circle p-2 d-flex align-items-center justify-content-center sicvet-inline-style-007"><i class="bi bi-x-circle fs-5"></i></div>
+                                    <span class="badge bg-danger-subtle text-danger rounded-pill fw-semibold">-3%</span>
+                                </div>
+                                <h2 class="fw-bold mb-0">1</h2>
+                                <small class="text-muted fw-medium">Citas Canceladas</small>
+                                <div class="border-bottom border-danger border-2 opacity-50 mt-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div class="bg-warning-subtle text-warning rounded-circle p-2 d-flex align-items-center justify-content-center sicvet-inline-style-007"><i class="bi bi-arrow-repeat fs-5"></i></div>
+                                    <span class="badge bg-success-subtle text-success rounded-pill fw-semibold">+2%</span>
+                                </div>
+                                <h2 class="fw-bold mb-0">1</h2>
+                                <small class="text-muted fw-medium">Reprogramadas</small>
+                                <div class="border-bottom border-warning border-2 opacity-50 mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lista Citas -->
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h6 class="fw-bold mb-0 text-dark">Citas de Hoy — <span class="text-muted fw-normal">1 Julio 2025</span></h6>
+                            <span class="badge bg-light text-muted fw-semibold px-3 py-2 rounded-pill">5 citas</span>
+                        </div>
+
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center pb-3 border-bottom gap-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="fw-bold text-primary sicvet-inline-style-033">09:00</span>
+                                    <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">MG</div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-dark">Luna — María García</h6>
+                                        <small class="text-muted">Consulta General · Dr. Alejandro Rivas</small>
+                                    </div>
+                                </div>
+                                <div><span class="badge bg-success-subtle text-success fw-semibold px-3 py-2 rounded-pill">Completada</span></div>
+                            </div>
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center pb-3 border-bottom gap-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="fw-bold text-primary sicvet-inline-style-033">10:30</span>
+                                    <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">MG</div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-dark">Mimi — María García</h6>
+                                        <small class="text-muted">Vacunación · Dra. Valentina Suárez</small>
+                                    </div>
+                                </div>
+                                <div><span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill">Pendiente</span></div>
+                            </div>
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center pb-3 border-bottom gap-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="fw-bold text-primary sicvet-inline-style-033">11:00</span>
+                                    <div class="bg-info text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">CR</div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-dark">Rocky — Carlos Rodríguez</h6>
+                                        <small class="text-muted">Peluquería · Marcos Delgado</small>
+                                    </div>
+                                </div>
+                                <div><span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill">Pendiente</span></div>
+                            </div>
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="fw-bold text-primary sicvet-inline-style-033">14:00</span>
+                                    <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">AM</div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0 text-dark">Coco — Ana Martínez</h6>
+                                        <small class="text-muted">Consulta General · Dr. Alejandro Rivas</small>
+                                    </div>
+                                </div>
+                                <div><span class="badge bg-danger-subtle text-danger fw-semibold px-3 py-2 rounded-pill">Cancelada</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================= MÓDULO 2: AGENDA ================= -->
+                <div class="tab-pane fade" id="pills-agenda" role="tabpanel">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">Gestión de Agenda</h4>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-light rounded-circle p-2 border-0"><i class="bi bi-bell fs-5 text-secondary"></i></button>
+                            <div class="vr opacity-25 sicvet-inline-style-030"></div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-031">SC</div>
+                                <div class="d-none d-sm-block">
+                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Sofía</h6>
+                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabla Horario -->
+                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="fw-bold mb-0 text-dark">Horario Semanal</h6>
+                            <small class="text-muted sicvet-inline-style-035">Toca una celda para bloquear / desbloquear</small>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle text-center mb-0 sicvet-inline-style-036">
+                                <thead>
+                                    <tr class="text-muted small fw-semibold">
+                                        <th class="text-start">Hora</th>
+                                        <th>Lun</th>
+                                        <th>Mar</th>
+                                        <th>Mié</th>
+                                        <th>Jue</th>
+                                        <th>Vie</th>
+                                        <th>Sáb</th>
+                                        <th>Dom</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start text-muted small fw-semibold">08:00</td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-muted small fw-semibold">12:00</td>
+                                        <td><span class="slot-btn badge bg-danger-subtle text-danger w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Bloq.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-danger-subtle text-danger w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Bloq.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-danger-subtle text-danger w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Bloq.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-muted small fw-semibold">13:00</td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-danger-subtle text-danger w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Bloq.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-danger-subtle text-danger w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Bloq.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                        <td><span class="slot-btn badge bg-primary-subtle text-primary w-100 py-2 rounded-3 fw-medium sicvet-inline-style-003">Disp.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Personal -->
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+                            <h6 class="fw-bold mb-0 text-dark">Disponibilidad del Personal</h6>
+                            
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="btn btn-primary rounded-pill px-3 py-1 border-0 small fw-semibold">Todos</button>
+                                <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Medicina General</button>
+                                <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Cirugía</button>
+                                <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Estética Canina</button>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle text-center mb-0 sicvet-inline-style-037">
+                                <thead>
+                                    <tr class="text-muted small fw-semibold">
+                                        <th class="text-start">Personal</th>
+                                        <th>Lun</th>
+                                        <th>Mar</th>
+                                        <th>Mié</th>
+                                        <th>Jue</th>
+                                        <th>Vie</th>
+                                        <th>Sáb</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-038">DA</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Dr. Alejandro Rivas</h6>
+                                                    <small class="text-muted sicvet-inline-style-008">Medicina General</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-start">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-038">DV</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Dra. Valentina Suárez</h6>
+                                                    <small class="text-muted sicvet-inline-style-008">Cirugía</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-start">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-038">MD</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Marcos Delgado</h6>
+                                                    <small class="text-muted sicvet-inline-style-008">Estética Canina</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                                        <td><div class="form-check form-switch d-flex justify-content-center m-0"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================= MÓDULO 3: CLIENTES Y MASCOTAS ================= -->
+                <div class="tab-pane fade" id="pills-clientes" role="tabpanel">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">Clientes y Mascotas</h4>
+                        
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-light rounded-circle p-2 border-0"><i class="bi bi-bell fs-5 text-secondary"></i></button>
+                            <div class="vr opacity-25 sicvet-inline-style-030"></div>
+                            
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-031">SC</div>
+                                <div class="d-none d-sm-block">
+                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Sofía</h6>
+                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buscador y Botón Nuevo Cliente -->
+                    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 mb-4">
+                        <div class="input-group bg-white rounded-3 shadow-sm border-0 px-2 py-1 flex-grow-1 sicvet-inline-style-039">
+                            <span class="input-group-text bg-transparent border-0 text-muted"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control border-0 shadow-none bg-transparent" placeholder="Buscar clientes por nombre o correo...">
+                        </div>
+
+                        <button type="button" class="btn btn-primary rounded-3 px-3 py-2 fw-semibold d-flex align-items-center gap-2 w-100 w-sm-auto justify-content-center" data-bs-toggle="modal" data-bs-target="#modalNuevoCliente">
+                            <i class="bi bi-plus-lg"></i> Nuevo Cliente
+                        </button>
+                    </div>
+
+                    <!-- Tabla de Clientes -->
+                    <div class="card border-0 shadow-sm rounded-4 p-3">
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle mb-0 sicvet-inline-style-036">
+                                <thead>
+                                    <tr class="text-muted small fw-semibold border-bottom">
+                                        <th class="sicvet-inline-style-040"></th>
+                                        <th>CLIENTE</th>
+                                        <th>TELÉFONO</th>
+                                        <th>MASCOTAS</th>
+                                        <th class="text-end pe-3">ACCIONES</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td class="text-muted"><i class="bi bi-chevron-right sicvet-inline-style-008"></i></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">MG</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">María García López</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">maria.garcia@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">04141234567</td>
+                                        <td class="text-muted small fw-medium">2 mascotas</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-link text-muted p-1 border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditarCliente"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-muted p-1 border-0" data-bs-toggle="modal" data-bs-target="#modalEliminarCliente"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="border-bottom">
+                                        <td class="text-muted"><i class="bi bi-chevron-right sicvet-inline-style-008"></i></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="bg-success text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">CR</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">Carlos Rodríguez Silva</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">carlos.rod@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">04167891234</td>
+                                        <td class="text-muted small fw-medium">1 mascota</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-link text-muted p-1 border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditarCliente"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-muted p-1 border-0" data-bs-toggle="modal" data-bs-target="#modalEliminarCliente"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="border-bottom">
+                                        <td class="text-muted"><i class="bi bi-chevron-right sicvet-inline-style-008"></i></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-034">AM</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">Ana Martínez Torres</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">ana.martinez@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">04121357908</td>
+                                        <td class="text-muted small fw-medium">2 mascotas</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-link text-muted p-1 border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditarCliente"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-link text-muted p-1 border-0" data-bs-toggle="modal" data-bs-target="#modalEliminarCliente"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================= MÓDULO 4: NUEVA CITA ================= -->
+                <div class="tab-pane fade" id="pills-nuevacita" role="tabpanel">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">Nueva Cita</h4>
+                        
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-light rounded-circle p-2 border-0"><i class="bi bi-bell fs-5 text-secondary"></i></button>
+                            <div class="vr opacity-25 sicvet-inline-style-030"></div>
+                            
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-031">SC</div>
+                                <div class="d-none d-sm-block">
+                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Sofía</h6>
+                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid p-0 sicvet-inline-style-041">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                            
+                            <div class="bg-primary text-white p-4">
+                                <h5 class="fw-bold mb-1">Nueva Cita</h5>
+                                <small class="text-white-50">Complete los datos para agendar</small>
+                            </div>
+
+                            <div class="card-body p-4 bg-white">
+                                <form id="formNuevaCita">
+                                    <div class="mb-3">
+                                        <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Cliente</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-white border-end-0 text-muted rounded-start-3"><i class="bi bi-search"></i></span>
+                                            <input type="text" class="form-control border-start-0 rounded-end-3" placeholder="Seleccionar cliente..." required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Mascota</label>
+                                        <select class="form-select rounded-3 text-muted" required>
+                                            <option value="" selected disabled>Seleccionar mascota...</option>
+                                            <option value="1">Luna (Perro)</option>
+                                            <option value="2">Mimi (Gato)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label text-muted fw-bold small text-uppercase d-block mb-2 sicvet-inline-style-042">Tipo de Servicio</label>
+                                        <div class="row g-2">
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" name="servicio" id="srv1" autocomplete="off" checked>
+                                                <label class="btn btn-outline-secondary w-100 text-start py-2 px-3 rounded-3 fw-medium text-dark border-opacity-25" for="srv1">Consulta General</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" name="servicio" id="srv2" autocomplete="off">
+                                                <label class="btn btn-outline-secondary w-100 text-start py-2 px-3 rounded-3 fw-medium text-dark border-opacity-25" for="srv2">Vacunación</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" name="servicio" id="srv3" autocomplete="off">
+                                                <label class="btn btn-outline-secondary w-100 text-start py-2 px-3 rounded-3 fw-medium text-dark border-opacity-25" for="srv3">Peluquería</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" name="servicio" id="srv4" autocomplete="off">
+                                                <label class="btn btn-outline-secondary w-100 text-start py-2 px-3 rounded-3 fw-medium text-dark border-opacity-25" for="srv4">Baño y Grooming</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" name="servicio" id="srv5" autocomplete="off">
+                                                <label class="btn btn-outline-secondary w-100 text-start py-2 px-3 rounded-3 fw-medium text-dark border-opacity-25" for="srv5">Cirugía</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="radio" class="btn-check" name="servicio" id="srv6" autocomplete="off">
+                                                <label class="btn btn-outline-secondary w-100 text-start py-2 px-3 rounded-3 fw-medium text-dark border-opacity-25" for="srv6">Revisión Dental</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-6">
+                                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Fecha</label>
+                                            <input type="date" class="form-control rounded-3 text-muted" value="2025-07-05" required>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Hora</label>
+                                            <select class="form-select rounded-3 text-muted" required>
+                                                <option value="" selected disabled>Seleccionar...</option>
+                                                <option value="08:00">08:00 AM</option>
+                                                <option value="09:00">09:00 AM</option>
+                                                <option value="10:00">10:00 AM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label text-muted fw-bold small text-uppercase d-block mb-2 sicvet-inline-style-042">Personal Asignado</label>
+                                        <div class="d-flex flex-column gap-2">
+                                            
+                                            <input type="radio" class="btn-check" name="personal" id="staff1" autocomplete="off" checked>
+                                            <label class="btn btn-outline-secondary text-start p-2 rounded-3 border-opacity-25 d-flex align-items-center gap-3" for="staff1">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-038">DA</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Dr. Alejandro Rivas</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">Medicina General</small>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" class="btn-check" name="personal" id="staff2" autocomplete="off">
+                                            <label class="btn btn-outline-secondary text-start p-2 rounded-3 border-opacity-25 d-flex align-items-center gap-3" for="staff2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-038">DV</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Dra. Valentina Suárez</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">Cirugía</small>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" class="btn-check" name="personal" id="staff3" autocomplete="off">
+                                            <label class="btn btn-outline-secondary text-start p-2 rounded-3 border-opacity-25 d-flex align-items-center gap-3" for="staff3">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-038">MD</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Marcos Delgado</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">Estética Canina</small>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" class="btn-check" name="personal" id="staff4" autocomplete="off">
+                                            <label class="btn btn-outline-secondary text-start p-2 rounded-3 border-opacity-25 d-flex align-items-center gap-3" for="staff4">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-038">SC</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Sofía Castillo</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" class="btn-check" name="personal" id="staff5" autocomplete="off">
+                                            <label class="btn btn-outline-secondary text-start p-2 rounded-3 border-opacity-25 d-flex align-items-center gap-3" for="staff5">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0 sicvet-inline-style-038">DM</div>
+                                                <div>
+                                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Diego Méndez</h6>
+                                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                                </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-100 py-2.5 rounded-3 fw-bold">
+                                        Confirmar Cita
+                                    </button>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================= MÓDULO 5: HISTORIAL DE CITAS ================= -->
+                <div class="tab-pane fade" id="pills-historial" role="tabpanel">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">Historial de Citas</h4>
+                        
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-light rounded-circle p-2 border-0"><i class="bi bi-bell fs-5 text-secondary"></i></button>
+                            <div class="vr opacity-25 sicvet-inline-style-030"></div>
+                            
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-031">SC</div>
+                                <div class="d-none d-sm-block">
+                                    <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-032">Sofía</h6>
+                                    <small class="text-muted d-block sicvet-inline-style-008">Recepcionista</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buscador, Fecha y Filtros de Estado -->
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                            <div class="input-group bg-white rounded-3 shadow-sm border-0 px-2 py-1 flex-grow-1 w-100">
+                                <span class="input-group-text bg-transparent border-0 text-muted"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control border-0 shadow-none bg-transparent" placeholder="Buscar por cliente, mascota o personal...">
+                            </div>
+
+                            <div class="bg-white rounded-3 shadow-sm px-3 py-2 border-0 w-100 w-md-auto text-center">
+                                <input type="date" class="border-0 bg-transparent text-muted small fw-medium shadow-none" value="2025-07-01">
+                            </div>
+                        </div>
+
+                        <!-- Filtros por Estado -->
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="btn btn-primary rounded-pill px-3 py-1 border-0 shadow-sm small fw-semibold">Todas</button>
+                            <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Pendientes</button>
+                            <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Completadas</button>
+                            <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Canceladas</button>
+                            <button class="btn btn-white bg-white rounded-pill px-3 py-1 border-0 text-secondary small fw-medium">Reprogramadas</button>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de Historial de Citas -->
+                    <div class="card border-0 shadow-sm rounded-4 p-3">
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle mb-0 sicvet-inline-style-043">
+                                <thead>
+                                    <tr class="text-muted small fw-semibold border-bottom">
+                                        <th>CLIENTE / MASCOTA</th>
+                                        <th>PERSONAL</th>
+                                        <th>SERVICIO</th>
+                                        <th>FECHA / HORA</th>
+                                        <th>ESTADO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td>
+                                            <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">María García</h6>
+                                            <small class="text-muted sicvet-inline-style-008">Luna · Perro</small>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-044">DA</div>
+                                                <span class="small fw-medium text-dark">Dr. Alejandro Rivas</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">Consulta General</td>
+                                        <td>
+                                            <div class="fw-bold text-dark small">2025-07-01</div>
+                                            <small class="text-muted d-block sicvet-inline-style-008">09:00</small>
+                                        </td>
+                                        <td><span class="badge bg-success-subtle text-success fw-semibold px-3 py-2 rounded-pill">Completada</span></td>
+                                    </tr>
+
+                                    <tr class="border-bottom">
+                                        <td>
+                                            <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">María García</h6>
+                                            <small class="text-muted sicvet-inline-style-008">Mimi · Gato</small>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-044">DV</div>
+                                                <span class="small fw-medium text-dark">Dra. Valentina Suárez</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">Vacunación</td>
+                                        <td>
+                                            <div class="fw-bold text-dark small">2025-07-01</div>
+                                            <small class="text-muted d-block sicvet-inline-style-008">10:30</small>
+                                        </td>
+                                        <td><span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill">Pendiente</span></td>
+                                    </tr>
+
+                                    <tr class="border-bottom">
+                                        <td>
+                                            <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">Carlos Rodríguez</h6>
+                                            <small class="text-muted sicvet-inline-style-008">Rocky · Perro</small>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-044">MD</div>
+                                                <span class="small fw-medium text-dark">Marcos Delgado</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">Peluquería</td>
+                                        <td>
+                                            <div class="fw-bold text-dark small">2025-07-01</div>
+                                            <small class="text-muted d-block sicvet-inline-style-008">11:00</small>
+                                        </td>
+                                        <td><span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill">Pendiente</span></td>
+                                    </tr>
+
+                                    <tr class="border-bottom">
+                                        <td>
+                                            <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">Ana Martínez</h6>
+                                            <small class="text-muted sicvet-inline-style-008">Coco · Perro</small>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-044">DA</div>
+                                                <span class="small fw-medium text-dark">Dr. Alejandro Rivas</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">Consulta General</td>
+                                        <td>
+                                            <div class="fw-bold text-dark small">2025-07-01</div>
+                                            <small class="text-muted d-block sicvet-inline-style-008">14:00</small>
+                                        </td>
+                                        <td><span class="badge bg-danger-subtle text-danger fw-semibold px-3 py-2 rounded-pill">Cancelada</span></td>
+                                    </tr>
+
+                                    <tr class="border-bottom">
+                                        <td>
+                                            <h6 class="fw-bold mb-0 text-dark sicvet-inline-style-029">Luis Hernández</h6>
+                                            <small class="text-muted sicvet-inline-style-008">Max · Perro</small>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center sicvet-inline-style-044">DV</div>
+                                                <span class="small fw-medium text-dark">Dra. Valentina Suárez</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-muted small fw-medium">Baño y Grooming</td>
+                                        <td>
+                                            <div class="fw-bold text-dark small">2025-07-01</div>
+                                            <small class="text-muted d-block sicvet-inline-style-008">15:30</small>
+                                        </td>
+                                        <td><span class="badge bg-warning-subtle text-warning fw-semibold px-3 py-2 rounded-pill">Reprogramada</span></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= MODALES Y OFFCANVAS DE CLIENTES ================= -->
+
+    <!-- 1. Modal Nuevo Cliente -->
+    <div class="modal fade" id="modalNuevoCliente" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered sicvet-inline-style-013">
+            <div class="modal-content border-0 rounded-4 p-3 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-dark">Nuevo Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Nombre Completo</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control border-start-0" placeholder="Nombre del cliente">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Correo Electrónico</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control border-start-0" placeholder="correo@email.com">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Teléfono</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-telephone"></i></span>
+                                <input type="text" class="form-control border-start-0" placeholder="04XX-XXXXXXX">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Dirección</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-geo-alt"></i></span>
+                                <input type="text" class="form-control border-start-0" placeholder="Ciudad, dirección">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Contraseña Temporal</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-lock"></i></span>
+                                <input type="password" class="form-control border-start-0" placeholder="Contraseña provisional">
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-outline-secondary w-50 rounded-3 fw-semibold" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary w-50 rounded-3 fw-semibold">Crear Cliente</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Offcanvas Editar Cliente -->
+    <div class="offcanvas offcanvas-end border-0 shadow-lg p-3 sicvet-inline-style-045" tabindex="-1" id="offcanvasEditarCliente">
+        <div class="offcanvas-header border-0 pb-0">
+            <h5 class="offcanvas-title fw-bold text-dark">Editar Cliente</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <form>
+                <div class="mb-3 mt-3">
+                    <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Nombre Completo</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control border-start-0" value="María García López">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Correo</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
+                        <input type="email" class="form-control border-start-0" value="maria.garcia@email.com">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Teléfono</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-telephone"></i></span>
+                        <input type="text" class="form-control border-start-0" value="04141234567">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-muted fw-bold small text-uppercase sicvet-inline-style-042">Dirección</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-geo-alt"></i></span>
+                        <input type="text" class="form-control border-start-0" value="Av. Principal #45, Caracas">
+                    </div>
+                </div>
+            </form>
+
+            <button type="button" class="btn btn-primary w-100 py-2.5 rounded-3 fw-bold mt-auto" data-bs-dismiss="offcanvas">
+                Guardar Cambios
+            </button>
+        </div>
+    </div>
+
+    <!-- 3. Modal Eliminar Cliente -->
+    <div class="modal fade" id="modalEliminarCliente" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered sicvet-inline-style-046">
+            <div class="modal-content border-0 rounded-4 p-4 text-center shadow-lg">
+                <div class="modal-body p-0">
+                    <div class="bg-danger-subtle text-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3 sicvet-inline-style-047">
+                        <i class="bi bi-exclamation-triangle fs-3"></i>
+                    </div>
+
+                    <h5 class="fw-bold text-dark mb-2">¿Eliminar cliente?</h5>
+                    <p class="text-muted small mb-4">Esta acción eliminará también las mascotas y citas asociadas. Es irreversible.</p>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-outline-secondary w-50 rounded-3 fw-semibold py-2" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger w-50 rounded-3 fw-semibold py-2" data-bs-dismiss="modal">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Confirmación de cita asignada -->
+    <div class="modal fade" id="modalCitaAsignada" tabindex="-1" aria-labelledby="tituloCitaAsignada" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered sicvet-inline-style-046">
+            <div class="modal-content border-0 rounded-4 p-4 text-center shadow-lg">
+                <div class="modal-body p-0">
+                    <div class="bg-success-subtle text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3 sicvet-inline-style-048">
+                        <i class="bi bi-check-lg fs-2"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2" id="tituloCitaAsignada">¡Cita asignada!</h5>
+                    <p class="text-muted small mb-4">La cita se ha confirmado correctamente.</p>
+                    <button type="button" class="btn btn-primary w-100 rounded-3 fw-semibold py-2" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE INTERACTIVIDAD -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("#formNuevaCita").addEventListener("submit", (event) => {
+                event.preventDefault();
+                bootstrap.Modal.getOrCreateInstance(document.querySelector("#modalCitaAsignada")).show();
+            });
+
+            // Conmutar celdas Disp / Bloq
+            document.querySelectorAll(".slot-btn").forEach(slot => {
+                slot.addEventListener("click", () => {
+                    if (slot.textContent.trim() === "Disp.") {
+                        slot.textContent = "Bloq.";
+                        slot.classList.replace("bg-primary-subtle", "bg-danger-subtle");
+                        slot.classList.replace("text-primary", "text-danger");
+                    } else {
+                        slot.textContent = "Disp.";
+                        slot.classList.replace("bg-danger-subtle", "bg-primary-subtle");
+                        slot.classList.replace("text-danger", "text-primary");
+                    }
+                });
+            });
+
+            // Cambiar estilos activos en el menú lateral al hacer clic
+            const tabButtons = document.querySelectorAll('#v-pills-tab button[data-bs-toggle="pill"]');
+            tabButtons.forEach(btn => {
+                btn.addEventListener('shown.bs.tab', (e) => {
+                    tabButtons.forEach(b => {
+                        b.classList.remove('active', 'bg-primary-subtle', 'text-primary', 'fw-semibold');
+                        b.classList.add('text-secondary', 'fw-medium', 'bg-transparent');
+                    });
+                    e.target.classList.add('active', 'bg-primary-subtle', 'text-primary', 'fw-semibold');
+                    e.target.classList.remove('text-secondary', 'fw-medium', 'bg-transparent');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

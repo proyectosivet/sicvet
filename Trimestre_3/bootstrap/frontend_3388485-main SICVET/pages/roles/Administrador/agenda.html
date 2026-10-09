@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SICVET - Gestión de Agenda</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body class="bg-light">
+
+  <div class="d-flex">
+    <!-- Sidebar / Menú Lateral -->
+    <aside class="bg-white border-end d-flex flex-column justify-content-between p-3 min-vh-100 sicvet-inline-style-006">
+      <div>
+        <div class="d-flex align-items-center gap-2 mb-4 px-2">
+          <div class=" rounded-3 d-flex align-items-center justify-content-center p-1 shadow-sm overflow-hidden sicvet-inline-style-007">
+            <img src="/assets/dashboard/img/logo.png" alt="logo huella" class="img-fluid w-100 h-100 object-fit-contain">
+            <i class="bi bi-paw-fill"></i>
+          </div>
+          <div>
+            <h6 class="fw-bold mb-0">SICVET</h6>
+            <small class="text-muted d-block sicvet-inline-style-008">Gestión Veterinaria</small>
+          </div>
+        </div>
+
+        <div class="nav nav-pills flex-column gap-1">
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="dashboard.html"><i class="bi bi-house"></i> Dashboard</a>
+          <a class="nav-link active d-flex align-items-center gap-2" href="agenda.html"><i class="bi bi-calendar-week"></i> Agenda</a>
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="clientes.html"><i class="bi bi-people"></i> Clientes y Mascotas</a>
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="usuarios.html"><i class="bi bi-shield-check"></i> Usuarios y Roles</a>
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="nueva-cita.html"><i class="bi bi-plus-circle"></i> Nueva Cita</a>
+          <a class="nav-link text-secondary d-flex align-items-center gap-2" href="historial-citas.html"><i class="bi bi-file-earmark-text"></i> Historial de Citas</a>
+        </div>
+      </div>
+
+      <div class="pt-3 border-top">
+        <a href="#" class="text-decoration-none text-secondary d-flex align-items-center gap-2 mb-2 small px-2"><i class="bi bi-person"></i> Mi Perfil</a>
+        <a href="/Home.html" class="text-decoration-none text-danger d-flex align-items-center gap-2 mb-3 small px-2"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
+        <div class="d-flex align-items-center gap-2 px-2">
+          <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">AS</div>
+          <div>
+            <p class="fw-bold mb-0 small">Administrador SICVET</p>
+            <small class="text-muted d-block sicvet-inline-style-008">Administrador</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow-1 min-vh-100">
+      <header class="d-flex justify-content-between align-items-center p-3 px-4 bg-white border-bottom">
+        <h5 class="fw-bold mb-0">Gestión de Agenda</h5>
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-bell text-secondary"></i>
+          <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">AS</div>
+          <div class="d-none d-md-block">
+            <p class="fw-bold mb-0 small">Administrador</p>
+            <small class="text-muted d-block sicvet-inline-style-008">Administrador</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="p-4">
+        <!-- BLOQUE SUPERIOR: HORARIO SEMANAL Y BLOQUEOS -->
+        <div class="card border-0 shadow-sm p-4 rounded-4 mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0">Horario Semanal</h6>
+            <small class="text-muted">Toca una celda para bloquear / desbloquear</small>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-borderless align-middle text-center mb-0">
+              <thead>
+                <tr class="text-muted small">
+                  <th class="sicvet-inline-style-010"></th>
+                  <th>Lun</th>
+                  <th>Mar</th>
+                  <th>Mié</th>
+                  <th>Jue</th>
+                  <th>Vie</th>
+                  <th>Sáb</th>
+                  <th>Dom</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 08:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">08:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 09:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">09:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 10:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">10:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 11:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">11:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 12:00 (Con Bloqueos) -->
+                <tr>
+                  <td class="text-muted small fw-medium">12:00</td>
+                  <td><button class="btn btn-sm bg-danger-subtle text-danger border-0 w-100 py-2 rounded-3 fw-medium">Bloq.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-danger-subtle text-danger border-0 w-100 py-2 rounded-3 fw-medium">Bloq.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-danger-subtle text-danger border-0 w-100 py-2 rounded-3 fw-medium">Bloq.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 13:00 (Con Bloqueos) -->
+                <tr>
+                  <td class="text-muted small fw-medium">13:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-danger-subtle text-danger border-0 w-100 py-2 rounded-3 fw-medium">Bloq.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-danger-subtle text-danger border-0 w-100 py-2 rounded-3 fw-medium">Bloq.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 14:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">14:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 15:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">15:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 16:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">16:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 17:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">17:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+                <!-- 18:00 -->
+                <tr>
+                  <td class="text-muted small fw-medium">18:00</td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                  <td><button class="btn btn-sm bg-primary-subtle text-primary border-0 w-100 py-2 rounded-3 fw-medium">Disp.</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- BLOQUE INFERIOR: DISPONIBILIDAD DEL PERSONAL POR DÍA -->
+        <div class="card border-0 shadow-sm p-4 rounded-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h6 class="fw-bold mb-0">Disponibilidad del Personal</h6>
+            <!-- Filtro de Especialidades -->
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-primary rounded-pill px-3">Todos</button>
+              <button class="btn btn-sm btn-light rounded-pill px-3 border text-secondary">Medicina General</button>
+              <button class="btn btn-sm btn-light rounded-pill px-3 border text-secondary">Cirugía</button>
+              <button class="btn btn-sm btn-light rounded-pill px-3 border text-secondary">Estética Canina</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-borderless align-middle mb-0">
+              <thead>
+                <tr class="text-muted small text-center">
+                  <th class="text-start">Personal</th>
+                  <th class="sicvet-inline-style-011">Lun</th>
+                  <th class="sicvet-inline-style-011">Mar</th>
+                  <th class="sicvet-inline-style-011">Mié</th>
+                  <th class="sicvet-inline-style-011">Jue</th>
+                  <th class="sicvet-inline-style-011">Vie</th>
+                  <th class="sicvet-inline-style-011">Sáb</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Dr. Alejandro Rivas -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">DA</div>
+                      <div>
+                        <strong>Dr. Alejandro Rivas</strong><br>
+                        <small class="text-muted">Medicina General</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                </tr>
+
+                <!-- Dra. Valentina Suárez -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">DV</div>
+                      <div>
+                        <strong>Dra. Valentina Suárez</strong><br>
+                        <small class="text-muted">Cirugía</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                </tr>
+
+                <!-- Marcos Delgado -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">MD</div>
+                      <div>
+                        <strong>Marcos Delgado</strong><br>
+                        <small class="text-muted">Estética Canina</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                </tr>
+
+                <!-- Sofía Castillo -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">SC</div>
+                      <div>
+                        <strong>Sofía Castillo</strong><br>
+                        <small class="text-muted">Recepcionista</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                </tr>
+
+                <!-- Diego Méndez -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold sicvet-inline-style-009">DM</div>
+                      <div>
+                        <strong>Diego Méndez</strong><br>
+                        <small class="text-muted">Recepcionista</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input fs-5" type="checkbox"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

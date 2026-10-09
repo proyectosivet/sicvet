@@ -1,0 +1,47 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="KEfARHm3XWOm2Z0Zs4OP">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cliente" parent="1" style="swimlane;startSize=24;fillColor=#e8f4f8;strokeColor=#6c8ebf;html=1;" value="Dispositivo del Usuario&#xa;(Cliente / Navegador)" vertex="1">
+          <mxGeometry height="240" width="300" x="410" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="navegador" parent="cliente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Navegador Web&#xa;(Google Chrome, Edge, etc.)" vertex="1">
+          <mxGeometry height="70" width="200" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="servidor" parent="1" style="swimlane;startSize=24;fillColor=#fff0e6;strokeColor=#d79b00;html=1;" value="Servidor Web y de Aplicaciones&lt;br&gt;(Servidor AWS Cloud)" vertex="1">
+          <mxGeometry height="420" width="350" x="860" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="servidor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;Amazon S3&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Frontend SICVET&lt;br&gt;HTML, CSS, JS" vertex="1">
+          <mxGeometry height="70" width="220" x="70" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gRY63D6CyhdnbSq8QY6N-2" edge="1" parent="servidor" source="backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="backend" parent="servidor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;Amazon EC2&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Backend API&lt;br&gt;SICVET" vertex="1">
+          <mxGeometry height="70" width="220" x="70" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="gRY63D6CyhdnbSq8QY6N-1" parent="servidor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;Amazon RDS&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;MySQL&lt;br&gt;Base de datos SICVET" vertex="1">
+          <mxGeometry height="70" width="220" x="70" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gRY63D6CyhdnbSq8QY6N-3" parent="servidor" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="SQL" vertex="1">
+          <mxGeometry height="30" width="60" x="130" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="gRY63D6CyhdnbSq8QY6N-4" edge="1" parent="servidor" source="frontend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="backend">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="174.41" y="130" as="sourcePoint" />
+            <mxPoint x="174.41" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="servidor" value="HTTPS / Puerto 443">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
